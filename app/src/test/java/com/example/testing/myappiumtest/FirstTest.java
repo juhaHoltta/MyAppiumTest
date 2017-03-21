@@ -92,14 +92,14 @@ public class FirstTest {
         deleteClrButton(deleteClr);
         numberButton("5");
         plusButton(plus);
-        numberButton("6");
+        numberButton("5");
         numberButton("5");
         equalButton(equal);
         backspaceButton(backspace);
 
         WebElement teksti =  driver.findElement(By.id("txtCalc"));
 
-        Assert.assertEquals("70. Muokataan.", teksti.getAttribute("text"));
+        Assert.assertEquals("60. Muokataan.", teksti.getAttribute("text"));
 
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
     }
