@@ -104,6 +104,21 @@ public class FirstTest {
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
     }
 
+    @Test
+    public void minusTwoNumbers(){
+        deleteClrButton(deleteClr);
+        numberButton("5");
+        subtractButton(minus);
+        numberButton("5");
+        equalButton(equal);
+
+        WebElement teksti =  driver.findElement(By.id("txtCalc"));
+
+        Assert.assertEquals("0. Muokataan.", teksti.getAttribute("text"));
+
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+    }
+
     @After
     public void End() {
         driver.quit();
