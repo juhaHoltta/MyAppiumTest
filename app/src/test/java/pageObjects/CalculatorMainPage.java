@@ -27,19 +27,37 @@ package pageObjects;
 
 public class CalculatorMainPage {
 
-    public static WebDriver driver;
+    WebDriver driver;
     public static String number;
-    public static String minus="bt_sub";
+    By minus = By.id("bt_sub");
     public static String equal="bt_equal";
     public static String backspace="bt_backspace";
     public static String deleteClr="//android.widget.Button";
     public static String plus="bt_add";
 
-public CalculatorMainPage clickNumberButton(String number){
-            // Click on number x button.
-            driver.findElement(By.name(number)).click();
-            return new CalculatorMainPage();
-        }
+    public CalculatorMainPage(WebDriver driver){
+        this.driver=driver;
+    }
+    public void clickNumberTwoButton()
+    {
+        driver.findElement(By.id("bt_02")).click();
+    }
+    public void clickNumberTreeButton()
+    {
+        driver.findElement(By.id("bt_03")).click();
+    }
+    public void clickNumberFourButton()
+    {
+        driver.findElement(By.id("bt_04")).click();
+    }
+    public void clickNumberFiveButton()
+    {
+        driver.findElement(By.id("bt_05")).click();
+    }
+    public void clickMinusButton()
+    {
+        driver.findElement(minus).click();
+    }
 
 
 }
